@@ -2,24 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tap(props){
+
   const drinkStyle = {
-    width: '500px',
+    width: '600px',
     background: 'silver',
-    height: '400px',
+    height: '600px',
+    color: 'black',
+    borderRadius: '10px',
   }
   const imgStyle = {
-    height: '400px',
+    width: '100px',
+    height: '100px',
   }
   return (
-    <div style={drinkStyle}>
-      <h2>{props.name}</h2>
-      <p>{props.brewer}</p>
-      <p><em>{props.description}</em></p>
-      <p>{props.abv}</p>
-      <p>{props.price}&</p>
-      <p>{props.remaining}</p>
-      <p style={imgStyle}>src={props.image}</p>
-      <hr/>
+      <div style={drinkStyle}>
+        <h1>{props.name}</h1>
+        <p>By {props.brewer}</p>
+        <p><em>"{props.description}"</em></p>
+        <p>{props.abv}</p>
+        <p>{props.price} $</p>
+        <h7>Remainig: {props.remaining}</h7>
+     <img style={imgStyle} src={props.image}/>
     </div>
     
   );

@@ -3,8 +3,8 @@ import React from 'react';
 function Header() {
   let imgUrl='https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-hnm5qgf5ur9fsiemsefum58ea3-20171019173603.Medi.jpeg'
   const style = {
-    backgroundColor: 'white',
-    color: '#031f4c',
+    backgroundColor: 'black',
+    color: 'white',
     fontFamily: 'Allerta Stencil',
     padding: '20px',
     textAlign: 'center',
@@ -19,7 +19,7 @@ function Header() {
   }
   return(
     <div style={style}>
-      <h1>Welcome to Poison Tap Room!!!</h1>
+      <h1>Welcome to AJ's Tap Room!!!</h1>
     </div>
   );
 }

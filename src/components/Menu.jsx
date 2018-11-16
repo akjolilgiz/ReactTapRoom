@@ -59,10 +59,13 @@ import Menut from './Menu';
     }
   ]
 
-function Menu(){   
+function Menu(){
+  const menuStyle = {
+    marginLeft: '400px',
+    textAlign: 'center',
+  }
   return (
-      <div>
-        <hr/>
+      <div style={menuStyle}>
         {masterKegList.map((tap, index) =>
           <Tap name={tap.name}
             brewer={tap.brewer}

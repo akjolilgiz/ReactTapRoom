@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const style = {
-    backgroundColor: '#1a0d00',
+    backgroundColor: 'gray',
     color: '#fff2e6',
     fontFamily: 'Allerta Stencil',
     padding: '20px',
