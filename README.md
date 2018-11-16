@@ -6,7 +6,7 @@
 
 ## Description
 
-_Create a page that lets user view the menu. It let the user view which taps are on sale, what is alcohol content on each tap. The program also lets Admin to see which taps need to be refilled_
+_Create a page that lets user view the Tap Room menu. It let the user view which taps are on sale, what is alcohol content on each tap. The program also lets Admin to see which taps need to be refilled_
 
 ## Setup/Installation Requirements
 

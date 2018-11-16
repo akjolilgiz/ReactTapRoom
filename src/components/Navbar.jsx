@@ -19,7 +19,7 @@ function Navbar() {
   return(
     <div>
       <div className="Navbar" style={style} >
-      <h3 style={textStyle}>About | Admin</h3>
+      <h3 style={textStyle}>About | <Link to="/Admin">Admin</Link></h3>
       </div>
     </div>
   );
