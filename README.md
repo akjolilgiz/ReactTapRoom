@@ -15,8 +15,9 @@ _Create a page that lets user view the Tap Room menu. It let the user view which
 * Run $ npm run start.
 * Navigate to localhost:8080 on the browser. 
 
+
 * App structure
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Structure](https://github.com/akjolilgiz/TapRoomReact/blob/master/Structure.png)
 
 
 ## Known Bugs
