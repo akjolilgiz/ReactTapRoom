@@ -6,22 +6,39 @@ function Tap(props){
   const drinkStyle = {
     width: '600px',
     background: 'silver',
-    height: '600px',
-    color: 'black',
+    height: '500px',
+    color: 'gold',
     borderRadius: '10px',
+    textAlign: 'center',
+    fontFamily: 'selfish',
   }
   const imgStyle = {
-    width: '100px',
-    height: '100px',
+    width: '200px',
+    height: '200px',
+    transform: 'translate(80px, -200px)',
+    position: 'relative',
+  }
+  const bottomStyle = {
+    textAlign: 'left',
+    marginLeft: '30px',
+    lineHeight: '10px',
+    color: 'black',
+  }
+  const middleStyle = {
+    color: 'red',
   }
   return (
       <div style={drinkStyle}>
         <h1>{props.name}</h1>
+        <div style={middleStyle}>
         <p>By {props.brewer}</p>
         <p><em>"{props.description}"</em></p>
-        <p>{props.abv}</p>
-        <p>{props.price} $</p>
-        <h7>Remainig: {props.remaining}</h7>
+        </div>
+        <div style={bottomStyle}>
+          <p>{props.abv}</p>
+          <p>{props.price} $</p>
+          <p>Remainig: {props.remaining}</p>
+        </div>
      <img style={imgStyle} src={props.image}/>
     </div>
     
