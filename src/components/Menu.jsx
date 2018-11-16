@@ -70,8 +70,8 @@ function Menu(){
             abv={tap.abv}
             price={tap.price}
             remaining={tap.remaining}
-            <img src="image={tap.image}"
-            key={index}/>        
+            image={tap.image}
+            key={index}/>
         )}
       </div>
     );

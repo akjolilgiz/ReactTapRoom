@@ -18,7 +18,7 @@ function Tap(props){
       <p>{props.abv}</p>
       <p>{props.price}&</p>
       <p>{props.remaining}</p>
-      <p style={imgStyle}>{props.image}</p>
+      <p style={imgStyle}>src={props.image}</p>
       <hr/>
     </div>
     
