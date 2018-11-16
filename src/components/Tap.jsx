@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Tap(props){
 
@@ -11,24 +12,29 @@ function Tap(props){
     borderRadius: '10px',
     textAlign: 'center',
     fontFamily: 'selfish',
+    border: '2px',
   }
   const imgStyle = {
     width: '200px',
     height: '200px',
-    transform: 'translate(80px, -200px)',
+    transform: 'translate(150px, -150px)',
     position: 'relative',
+    border: '2px solid yellow',
+    borderRadius: '100px',
   }
   const bottomStyle = {
     textAlign: 'left',
-    marginLeft: '30px',
+    marginLeft: '50px',
     lineHeight: '10px',
     color: 'black',
+    marginTop: '50px'
   }
   const middleStyle = {
     color: 'red',
   }
   return (
-      <div style={drinkStyle}>
+    
+    <Link to="/Details"><div style={drinkStyle}>
         <h1>{props.name}</h1>
         <div style={middleStyle}>
         <p>By {props.brewer}</p>
@@ -40,8 +46,7 @@ function Tap(props){
           <p>Remainig: {props.remaining}</p>
         </div>
      <img style={imgStyle} src={props.image}/>
-    </div>
-    
+    </div></Link>
   );
 }
 
