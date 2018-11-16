@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tap(props){
+  const drinkStyle = {
+    width: '200px',
+    background: 'silver',
+  }
   return (
     <div>
         <style jsx>{`
@@ -9,6 +13,7 @@ function Tap(props){
             background-color: gray;
           }
         `}</style>
+      <div className="row">
       <h2>{props.name}</h2>
       <p>{props.brewer}</p>
       <p><em>{props.description}</em></p>
