@@ -1,29 +1,23 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import Navbar from './Navbar';
 import { Switch, Route } from 'react-router-dom';
-
-/*
-  import { Link } from 'react-router-dom';
-  <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
-*/
+import Header from './Header';
+import Homepage from './Homepage';
 
 function App(){
   var styles = {
+    backgroundColor: 'yellow',
   };
   return (
     <div style={styles}>
-      <style jsx>{`
-        font-family: Helvetica;
-      `}</style>
-      TapRoom
-      {/* <Switch>
-        <Route exact path='/' component={} />
-      </Switch> */}
+      <Navbar/>  
+      <Header/>
+      <Switch>
+      <Route exact path='/' component={Homepage} />
+      </Switch>
     </div>
   );
 }
 
-//App.propTypes = {
-//};
 
 export default App;
