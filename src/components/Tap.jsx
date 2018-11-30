@@ -30,6 +30,10 @@ function Tap(props) {
   const middleStyle = {
     color: "red"
   };
+
+  function onClickSellTap() {
+    props.onSoldTap(props.index);
+  }
   return (
     <div style={drinkStyle}>
       <h1>{props.name}</h1>
@@ -42,8 +46,9 @@ function Tap(props) {
       <div style={bottomStyle}>
         <p>Abv: {props.abv}</p>
         <p>Price: {props.price} $</p>
-        {/* <p>Remainig: {props.remaining}</p> */}
+        <p>Remainig: {props.remaining}</p>
       </div>
+      <button onClick={onClickSellTap}>Order</button>
       {/* <img style={imgStyle} src={props.image} /> */}
     </div>
   );
@@ -57,6 +62,7 @@ Tap.propTypes = {
   price: PropTypes.string,
   remaining: PropTypes.number,
   image: PropTypes.string
+  // index: PropTypes.number
 };
 
 export default Tap;

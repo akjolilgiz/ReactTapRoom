@@ -12,7 +12,9 @@ const MenuList = props => {
           abv={tap.abv}
           price={tap.price}
           remaining={tap.remaining}
+          onSoldTap={props.onSoldTap}
           key={index}
+          index={index}
         />
       ))}
     </div>

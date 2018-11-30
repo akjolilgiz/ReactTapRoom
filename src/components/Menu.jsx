@@ -1,6 +1,8 @@
 import React from "react";
 import Tap from "./Tap";
 import MenuList from "./MenuList";
+import { Switch, Route } from "react-router-dom";
+
 class Menu extends React.Component {
   constructor(props) {
     super(props);
@@ -144,11 +146,22 @@ class Menu extends React.Component {
         }
       ]
     };
+    this.handleSoldTap = this.handleSoldTap.bind(this);
   }
+
+  handleSoldTap(index) {
+    var newMenuList = this.state.MenuList.slice();
+    newMenuList[index].remaining--;
+    this.setState({ MenuList: newMenuList });
+  }
+
   render() {
     return (
       <div>
-        <MenuList MenuList={this.state.MenuList} />
+        <MenuList
+          MenuList={this.state.MenuList}
+          onSoldTap={this.handleSoldTap}
+        />
       </div>
     );
   }
