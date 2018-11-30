@@ -2,6 +2,7 @@ import React from "react";
 import Tap from "./Tap";
 import MenuList from "./MenuList";
 import { Switch, Route } from "react-router-dom";
+import Admin from "./Admin";
 
 class Menu extends React.Component {
   constructor(props) {
@@ -147,11 +148,17 @@ class Menu extends React.Component {
       ]
     };
     this.handleSoldTap = this.handleSoldTap.bind(this);
+    this.handleNewTap = this.handleNewTap.bind(this);
   }
 
   handleSoldTap(index) {
     var newMenuList = this.state.MenuList.slice();
     newMenuList[index].remaining--;
+    this.setState({ MenuList: newMenuList });
+  }
+  handleNewTap(newTap) {
+    var newMenuList = this.state.MenuList.slice();
+    newMenuList.push(newTap);
     this.setState({ MenuList: newMenuList });
   }
 
@@ -162,6 +169,18 @@ class Menu extends React.Component {
           MenuList={this.state.MenuList}
           onSoldTap={this.handleSoldTap}
         />
+        <switch>
+          <Route
+            path="/Admin"
+            render={props => (
+              <Admin
+                ticketList={this.state.masterTicketList}
+                currentRouterPath={props.location.pathname}
+                onNewTap={this.handleNewTap}
+              />
+            )}
+          />
+        </switch>
       </div>
     );
   }
