@@ -1,12 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 
 function Details() {
-
-  return(
+  return (
     <div>
       <div>
-      <h3>Details</h3>
+        <h3>Details</h3>
       </div>
     </div>
   );
