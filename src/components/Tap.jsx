@@ -5,12 +5,12 @@ function Tap(props) {
   const drinkStyle = {
     width: "600px",
     background: "silver",
-    height: "500px",
+    height: "300px",
     color: "gold",
     borderRadius: "10px",
-    textAlign: "center",
     fontFamily: "selfish",
-    border: "2px"
+    border: "2px",
+    marginLeft: "25%"
   };
   const imgStyle = {
     width: "200px",
@@ -34,24 +34,56 @@ function Tap(props) {
   function onClickSellTap() {
     props.onSoldTap(props.index);
   }
-  return (
-    <div style={drinkStyle}>
-      <h1>{props.name}</h1>
-      <div style={middleStyle}>
-        <p>By {props.brewer}</p>
-        <p>
-          <em>"{props.description}"</em>
-        </p>
+  function onClickFillTap() {
+    props.onFillingUp(props.index);
+  }
+  function handleAlert() {
+    props.onAlert();
+  }
+  var buttonStyle = {
+    height: "30px",
+    width: "90px"
+  };
+  var displayedTap = null;
+
+  if (props.currentRouterPath === "/admin") {
+    return (displayedTap = (
+      <div style={drinkStyle}>
+        <h1>{props.name}</h1>
+        <div style={middleStyle}>
+          <p>By {props.brewer}</p>
+          <p>
+            <em>"{props.description}"</em>
+          </p>
+        </div>
+        <div style={bottomStyle}>
+          <p>Abv: {props.abv}</p>
+          <p>Price: {props.price} $</p>
+          <p>Remaini: {props.remaining}</p>
+        </div>
+        <button style={buttonStyle} onClick={onClickFillTap}>
+          Fill up
+        </button>
       </div>
-      <div style={bottomStyle}>
-        <p>Abv: {props.abv}</p>
-        <p>Price: {props.price} $</p>
-        <p>Remainig: {props.remaining}</p>
+    ));
+  } else {
+    return (displayedTap = (
+      <div style={drinkStyle}>
+        <h1>{props.name}</h1>
+        <div style={middleStyle}>
+          <p>By {props.brewer}</p>
+          <p>
+            <em>"{props.description}"</em>
+          </p>
+        </div>
+        <div style={bottomStyle}>
+          <p>Abv: {props.abv}</p>
+          <p>Price: {props.price} $</p>
+        </div>
+        <button onClick={onClickSellTap}>Order</button>
       </div>
-      <button onClick={onClickSellTap}>Order</button>
-      {/* <img style={imgStyle} src={props.image} /> */}
-    </div>
-  );
+    ));
+  }
 }
 
 Tap.propTypes = {
@@ -61,7 +93,9 @@ Tap.propTypes = {
   abv: PropTypes.string,
   price: PropTypes.string,
   remaining: PropTypes.number,
-  image: PropTypes.string
+  image: PropTypes.string,
+  currentRouterPath: PropTypes.string,
+  onAlert: PropTypes.func
   // index: PropTypes.number
 };
 

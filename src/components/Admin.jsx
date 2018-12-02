@@ -1,19 +1,27 @@
 import React from "react";
 import NewTapForm from "./NewTapForm";
+import MenuList from "./MenuList";
+import PropTypes from "prop-types";
 
-function Admin() {
+function Admin(props) {
   return (
     <div>
-      <h1>asdasdas</h1>
-      <NewTapForm onNewTap={this.handleNewTap} />
       <div>
+        <NewTapForm onNewTap={props.onNewTap} />
         <MenuList
-          MenuList={props.MenuList}
-          currentRoutePath={props.currentRoutePath}
+          menuList={props.menuList}
+          currentRouterPath={props.currentRouterPath}
+          onAlert={props.onAlert}
+          onSoldTap={props.onSoldTap}
+          onFillingUp={props.onFillingUp}
         />
       </div>
     </div>
   );
 }
+Admin.propTypes = {
+  MenuList: PropTypes.array,
+  currentRouterPath: PropTypes.string
+};
 
 export default Admin;

@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 
 const NewTapForm = props => {
+  let _name = null;
+  let _brewer = null;
+  let _description = null;
+  let _abv = null;
+  let _price = null;
+  let _remaining = null;
+  let _url = null;
+
   function handleAddingNewTap(event) {
     event.preventDefault();
     props.onNewTap({
@@ -8,18 +16,21 @@ const NewTapForm = props => {
       brewer: _brewer.value,
       description: _description.value,
       abv: _abv.value,
-      orice: _orice.value,
+      price: _price.value,
       remaining: _remaining.value,
       url: _url.value
     });
-    _names.value = "";
-    _location.value = "";
-    _issue.value = "";
+    _name.value = "";
+    _brewer.value = "";
+    _description.value = "";
+    _abv.value = "";
+    _price.value = "";
+    _url.value = "";
   }
   return (
     <div>
       <h1>Add a new tap!</h1>
-      <form>
+      <form onSubmit={handleAddingNewTap}>
         <input
           type="text"
           id="name"
@@ -65,7 +76,7 @@ const NewTapForm = props => {
           id="Remaining"
           placeholder="Amount on stock"
           ref={input => {
-            _remaining = input;
+            _remaining = parseInt(input);
           }}
         />
         <input
