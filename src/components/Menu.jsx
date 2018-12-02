@@ -24,127 +24,127 @@ class Menu extends React.Component {
           abv: "4.5",
           price: "6",
           remaining: 40
+        },
+        {
+          name: "Hamm's",
+          brewer: "Miller/Coors",
+          description: "American Lager",
+          abv: "4.7",
+          price: "3",
+          remaining: 40
+        },
+        {
+          name: "Prismatic",
+          brewer: "Ninkasi",
+          description: "Juicy IPA",
+          abv: "5.9",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "Juicy Haze",
+          brewer: "New Belgium",
+          description: "India Pale Ale",
+          abv: "7.5",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "8 Hop",
+          brewer: "New Belgium",
+          description: "Pale Ale",
+          abv: "5.5",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "High Road",
+          brewer: "Walking Man Brewing",
+          description: "Scotch / Wee Heavy",
+          abv: "9.2",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "Helldorado",
+          brewer: "Firestone Walker Brewing Company",
+          description: "Barrel Aged Barleywine - Blonde",
+          abv: "13.2",
+          price: "7",
+          remaining: 40
+        },
+        {
+          name: "Canadian Breakfast Stout",
+          brewer: "Founders Brewing Co.",
+          description: "Stout",
+          abv: "11.6",
+          price: "10",
+          remaining: 40
+        },
+        {
+          name: "Alpha",
+          brewer: "Block 15 Brewing Company",
+          description: "IPA - American",
+          abv: "6.4",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "Rye Lager",
+          brewer: "Chuckanut Brewery",
+          description: "Rye Beer",
+          abv: "5.7",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "American Wheat",
+          brewer: "Chuckanut Brewery",
+          description: "Pale Wheate Ale - American",
+          abv: "5.2",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "Divination",
+          brewer: "Holy Mountain Brewing",
+          description: "Saison - Oak Foudre w/ Orange Peel",
+          abv: "5.8",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "Trigo",
+          brewer: "Founders Brewing Co.",
+          description: "Lager - IPL(India Pale Lager",
+          abv: "6.3",
+          price: "5.50",
+          remaining: 40
+        },
+        {
+          name: "G.O.A.T.U.S",
+          brewer: "Structures Brewing",
+          description: "IPA - Black/Cascadian Dark Ale",
+          abv: "7",
+          price: "6",
+          remaining: 40
+        },
+        {
+          name: "RPM IPM",
+          brewer: "Boneyard Beer",
+          description: "IPA - American",
+          abv: "6.6",
+          price: "5.50",
+          remaining: 40
+        },
+        {
+          name: "Zazzle",
+          brewer: "Cloudburst Brewing",
+          description: "7",
+          abv: "8.3",
+          price: "7",
+          remaining: 40
         }
-        // {
-        //   name: "Hamm's",
-        //   brewer: "Miller/Coors",
-        //   description: "American Lager",
-        //   abv: "4.7",
-        //   price: "3",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Prismatic",
-        //   brewer: "Ninkasi",
-        //   description: "Juicy IPA",
-        //   abv: "5.9",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Juicy Haze",
-        //   brewer: "New Belgium",
-        //   description: "India Pale Ale",
-        //   abv: "7.5",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "8 Hop",
-        //   brewer: "New Belgium",
-        //   description: "Pale Ale",
-        //   abv: "5.5",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "High Road",
-        //   brewer: "Walking Man Brewing",
-        //   description: "Scotch / Wee Heavy",
-        //   abv: "9.2",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Helldorado",
-        //   brewer: "Firestone Walker Brewing Company",
-        //   description: "Barrel Aged Barleywine - Blonde",
-        //   abv: "13.2",
-        //   price: "7",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Canadian Breakfast Stout",
-        //   brewer: "Founders Brewing Co.",
-        //   description: "Stout",
-        //   abv: "11.6",
-        //   price: "10",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Alpha",
-        //   brewer: "Block 15 Brewing Company",
-        //   description: "IPA - American",
-        //   abv: "6.4",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Rye Lager",
-        //   brewer: "Chuckanut Brewery",
-        //   description: "Rye Beer",
-        //   abv: "5.7",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "American Wheat",
-        //   brewer: "Chuckanut Brewery",
-        //   description: "Pale Wheate Ale - American",
-        //   abv: "5.2",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Divination",
-        //   brewer: "Holy Mountain Brewing",
-        //   description: "Saison - Oak Foudre w/ Orange Peel",
-        //   abv: "5.8",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Trigo",
-        //   brewer: "Founders Brewing Co.",
-        //   description: "Lager - IPL(India Pale Lager",
-        //   abv: "6.3",
-        //   price: "5.50",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "G.O.A.T.U.S",
-        //   brewer: "Structures Brewing",
-        //   description: "IPA - Black/Cascadian Dark Ale",
-        //   abv: "7",
-        //   price: "6",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "RPM IPM",
-        //   brewer: "Boneyard Beer",
-        //   description: "IPA - American",
-        //   abv: "6.6",
-        //   price: "5.50",
-        //   remaining: 40
-        // },
-        // {
-        //   name: "Zazzle",
-        //   brewer: "Cloudburst Brewing",
-        //   description: "7",
-        //   abv: "8.3",
-        //   price: "7",
-        //   remaining: 40
-        // }
       ]
     };
     this.handleSoldTap = this.handleSoldTap.bind(this);
@@ -154,6 +154,7 @@ class Menu extends React.Component {
     this.handleSortByLowestPrice = this.handleSortByLowestPrice.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
+
   handleDelete(index) {
     var newMenuList = this.state.MenuList.slice();
     var splicedMenuList = newMenuList.splice(index, 1);
@@ -175,7 +176,7 @@ class Menu extends React.Component {
   }
   handleSoldTap(index) {
     var newMenuList = this.state.MenuList.slice();
-    newMenuList[index].remaining--;
+    newMenuList[index].remaining -= 20;
     this.setState({ MenuList: newMenuList });
   }
   handleFillingUp(index) {
@@ -188,6 +189,9 @@ class Menu extends React.Component {
     newMenuList.push(newTap);
     this.setState({ MenuList: newMenuList });
   }
+  componentDidMount() {
+    // this.handleEmptyTap();
+  }
   render() {
     var sortButtonStyle = {
       height: "50px",
@@ -197,16 +201,16 @@ class Menu extends React.Component {
       height: "25px",
       width: "180px",
       backgroundColor: "silver",
-      marginLeft: "622"
+      marginLeft: "622px"
     };
     return (
       <div>
         <div style={sortStyle}>Sort By Price</div>
-        <button style={sortButtonStyle} onClick={this.handleSortByHighestPrice}>
-          $$$
-        </button>
         <button style={sortButtonStyle} onClick={this.handleSortByLowestPrice}>
           $
+        </button>
+        <button style={sortButtonStyle} onClick={this.handleSortByHighestPrice}>
+          $$$
         </button>
 
         <switch>

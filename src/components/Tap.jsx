@@ -62,7 +62,7 @@ function Tap(props) {
         <div style={bottomStyle}>
           <p>Alcohol Content: {props.abv} %</p>
           <p>Price: {props.price} $</p>
-          <p>Remaini: {props.remaining}</p>
+          <p>Remaining: {props.remaining}</p>
         </div>
         <button style={buttonStyle} onClick={onClickFillTap}>
           Fill up

@@ -7,7 +7,6 @@ const NewTapForm = props => {
   let _abv = null;
   let _price = null;
   let _remaining = null;
-  let _url = null;
 
   function handleAddingNewTap(event) {
     event.preventDefault();
@@ -17,15 +16,13 @@ const NewTapForm = props => {
       description: _description.value,
       abv: _abv.value,
       price: _price.value,
-      remaining: _remaining.value,
-      url: _url.value
+      remaining: _remaining.value
     });
     _name.value = "";
     _brewer.value = "";
     _description.value = "";
     _abv.value = "";
     _price.value = "";
-    _url.value = "";
   }
   return (
     <div>
@@ -77,14 +74,6 @@ const NewTapForm = props => {
           placeholder="Amount on stock"
           ref={input => {
             _remaining = parseInt(input);
-          }}
-        />
-        <input
-          type="text"
-          id="image"
-          placeholder="Enter image url"
-          ref={input => {
-            _url = input;
           }}
         />
         <button type="submit">Add!</button>
