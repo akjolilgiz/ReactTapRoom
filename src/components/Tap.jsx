@@ -30,7 +30,9 @@ function Tap(props) {
   const middleStyle = {
     color: "red"
   };
-
+  function handleDelete() {
+    props.onDelete(props.index);
+  }
   function onClickSellTap() {
     props.onSoldTap(props.index);
   }
@@ -44,6 +46,7 @@ function Tap(props) {
     height: "30px",
     width: "90px"
   };
+
   var displayedTap = null;
 
   if (props.currentRouterPath === "/admin") {
@@ -57,12 +60,15 @@ function Tap(props) {
           </p>
         </div>
         <div style={bottomStyle}>
-          <p>Abv: {props.abv}</p>
+          <p>Alcohol Content: {props.abv} %</p>
           <p>Price: {props.price} $</p>
           <p>Remaini: {props.remaining}</p>
         </div>
         <button style={buttonStyle} onClick={onClickFillTap}>
           Fill up
+        </button>
+        <button style={buttonStyle} onClick={handleDelete}>
+          Delete
         </button>
       </div>
     ));
@@ -77,7 +83,7 @@ function Tap(props) {
           </p>
         </div>
         <div style={bottomStyle}>
-          <p>Abv: {props.abv}</p>
+          <p>Alcohol Content: {props.abv} %</p>
           <p>Price: {props.price} $</p>
         </div>
         <button onClick={onClickSellTap}>Order</button>

@@ -14,6 +14,7 @@ function Admin(props) {
           onAlert={props.onAlert}
           onSoldTap={props.onSoldTap}
           onFillingUp={props.onFillingUp}
+          onDelete={props.onDelete}
         />
       </div>
     </div>

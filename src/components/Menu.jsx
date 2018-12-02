@@ -14,7 +14,7 @@ class Menu extends React.Component {
           brewer: "Hi-Wheel",
           description: "Sparkling Wine & Grapefruit",
           abv: "6.8",
-          price: "7",
+          price: "12",
           remaining: 40
         },
         {
@@ -150,8 +150,29 @@ class Menu extends React.Component {
     this.handleSoldTap = this.handleSoldTap.bind(this);
     this.handleNewTap = this.handleNewTap.bind(this);
     this.handleFillingUp = this.handleFillingUp.bind(this);
+    this.handleSortByHighestPrice = this.handleSortByHighestPrice.bind(this);
+    this.handleSortByLowestPrice = this.handleSortByLowestPrice.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
-
+  handleDelete(index) {
+    var newMenuList = this.state.MenuList.slice();
+    var splicedMenuList = newMenuList.splice(index, 1);
+    this.setState({ MenuList: splicedMenuList });
+  }
+  handleSortByHighestPrice() {
+    var newMenuList = this.state.MenuList.slice();
+    var sortedMenu = newMenuList.sort(function(a, b) {
+      return b.price - a.price;
+    });
+    this.setState({ MenuList: sortedMenu });
+  }
+  handleSortByLowestPrice() {
+    var newMenuList = this.state.MenuList.slice();
+    var sortedMenu = newMenuList.sort(function(a, b) {
+      return a.price - b.price;
+    });
+    this.setState({ MenuList: sortedMenu });
+  }
   handleSoldTap(index) {
     var newMenuList = this.state.MenuList.slice();
     newMenuList[index].remaining--;
@@ -167,10 +188,27 @@ class Menu extends React.Component {
     newMenuList.push(newTap);
     this.setState({ MenuList: newMenuList });
   }
-
   render() {
+    var sortButtonStyle = {
+      height: "50px",
+      width: "90px"
+    };
+    var sortStyle = {
+      height: "25px",
+      width: "180px",
+      backgroundColor: "silver",
+      marginLeft: "622"
+    };
     return (
       <div>
+        <div style={sortStyle}>Sort By Price</div>
+        <button style={sortButtonStyle} onClick={this.handleSortByHighestPrice}>
+          $$$
+        </button>
+        <button style={sortButtonStyle} onClick={this.handleSortByLowestPrice}>
+          $
+        </button>
+
         <switch>
           <Route
             path="/admin"
@@ -181,6 +219,7 @@ class Menu extends React.Component {
                 onAlert={this.handleAlert}
                 onFillingUp={this.handleFillingUp}
                 onNewTap={this.handleNewTap}
+                onDelete={this.handleDelete}
               />
             )}
           />
@@ -191,6 +230,8 @@ class Menu extends React.Component {
               <MenuList
                 menuList={this.state.MenuList}
                 onSoldTap={this.handleSoldTap}
+                onSortByHighestPrice={this.handleSortByHighestPrice}
+                onSortByLowestPrice={this.handleSortByLowestPrice}
               />
             )}
           />

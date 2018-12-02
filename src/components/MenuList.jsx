@@ -16,6 +16,7 @@ const MenuList = props => {
           onSoldTap={props.onSoldTap}
           onFillingUp={props.onFillingUp}
           currentRouterPath={props.currentRouterPath}
+          onDelete={props.onDelete}
           onAlert={props.onAlert}
           key={index}
           index={index}
