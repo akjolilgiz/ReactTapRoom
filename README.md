@@ -12,6 +12,7 @@ _Create a page that lets user view the Tap Room menu. It let the user view which
 
 * Clone the repository.
 * Run $ npm install.
+* If npm install shows and error, delete font-awesome from json file and run $ npm install. 
 * Run $ npm run start.
 * Navigate to localhost:8080 on the browser. 
 
